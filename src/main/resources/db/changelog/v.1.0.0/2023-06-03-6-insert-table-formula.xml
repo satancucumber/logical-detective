@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet logicalFilePath="2023-06-03-6-insert-table-formula"
+               id="2023-06-03-6-insert-table-formula" author="satancucumber">
+            <insert tableName="formula">
+                <column  name="description"  value="если сигнализация работала и преступление произошло не ночью то Алекс преступник"/>
+                <column  name="plot_id"  value="1"/>
+                <column  name="operators"  value="{=>,&amp;,*,!,*,*}"/>
+            </insert>
+            <insert tableName="formula">
+                <column  name="description"  value="Брюс всегда включает сигнализацию когда уходит с работы"/>
+                <column  name="plot_id"  value="1"/>
+                <column  name="operators"  value="{=>,*,*}"/>
+            </insert>
+            <insert tableName="formula">
+                <column  name="description"  value="остальные постоянно забывают это делать"/>
+                <column  name="plot_id"  value="1"/>
+                <column  name="operators"  value="{=>,!,*,!,*}"/>
+            </insert>
+            <insert tableName="formula">
+                <column  name="description"  value="Вчера на работе были Карл Дилан и Брюс"/>
+                <column  name="plot_id"  value="1"/>
+                <column  name="operators"  value="{|,*,|,*,*}"/>
+            </insert>
+            <insert tableName="formula">
+                <column  name="description"  value="Сегодня утром на работу пришли Алекс Карл и Дилан"/>
+                <column  name="plot_id"  value="1"/>
+                <column  name="operators"  value="{&amp;,*,&amp;,*,*}"/>
+            </insert>
+            <insert tableName="formula">
+                <column  name="description"  value="По чётным числам Брюс уезжает раньше всех в типографию. По нечетным происходит наоборот"/>
+                <column  name="plot_id"  value="1"/>
+                <column  name="operators"  value="{!,&amp;,!,*,|,*,*}"/>
+            </insert>
+            <insert tableName="formula">
+                <column  name="description"  value="Ночью камеры работали и сейф контролировался"/>
+                <column  name="plot_id"  value="1"/>
+                <column  name="operators"  value="{!,*}"/>
+            </insert>
+            <insert tableName="formula">
+                <column  name="description"  value="Если Карл ушёл последним и пришёл утром, то он преступник"/>
+                <column  name="plot_id"  value="1"/>
+                <column  name="operators"  value="{=>,&amp;,*,*,*}"/>
+            </insert>
+            <insert tableName="formula">
+                <column  name="description"  value="Если Брюс ушёл последним и преступление произошло ночью то он преступник"/>
+                <column  name="plot_id"  value="1"/>
+                <column  name="operators"  value="{=>,&amp;,*,*,*}"/>
+            </insert>
+            <insert tableName="formula">
+                <column  name="description"  value="Если Дилан ушёл последним и пришёл утром то он преступник"/>
+                <column  name="plot_id"  value="1"/>
+                <column  name="operators"  value="{=>,&amp;,*,*,*}"/>
+            </insert>
+    </changeSet>
+</databaseChangeLog>

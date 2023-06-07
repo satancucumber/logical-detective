@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet logicalFilePath="2023-06-03-2-create-table-formula"
+               id="2023-06-03-2-create-table-formula" author="satancucumber">
+        <createTable tableName="formula">
+            <column name="id" type="serial">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="description" type="varchar(256)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operators" type="varchar(256) []">
+                <constraints nullable="false"/>
+            </column>
+            <column name="plot_id" type="bigint"/>
+        </createTable>
+
+        <addForeignKeyConstraint constraintName="fk_formula2plot"
+                                 baseTableName="formula"
+                                 baseColumnNames="plot_id"
+                                 referencedTableName="plot"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet logicalFilePath="2023-06-03-5-insert-table-plot"
+               id="2023-06-03-5-insert-table-plot" author="satancucumber">
+        <insert tableName="plot">
+            <column  name="name"  value="Сейф"/>
+            <column  name="text"  value="{Был вскрыт сейф сигнализация не сработала. Доступ к отключению сигнализации утром имеет только Алекс. Поэтому ,если сигнализация работала и преступление произошло не ночью то Алекс преступник,. ,Брюс всегда включает сигнализацию когда уходит с работы, в отличие от остальных - ,остальные постоянно забывают это делать,. ,Вчера на работе были Карл Дилан и Брюс,. ,Сегодня утром на работу пришли Алекс Карл и Дилан,. Вчера было нечётное число. ,По чётным числам Брюс уезжает раньше всех в типографию. По нечетным происходит наоборот,. ,Ночью камеры работали и сейф контролировался,. ,Если Карл ушёл последним и пришёл утром то он преступник,. ,Если Брюс ушёл последним и преступление произошло ночью то он преступник,. ,Если Дилан ушёл последним и пришёл утром то он преступник,.}"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

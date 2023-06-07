@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet logicalFilePath="2023-06-03-4-create-table-formula_literal"
+               id="2023-06-03-4-create-table-formula_literal" author="satancucumber">
+        <createTable tableName="formula_literal">
+            <column name="id" type="bigserial">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="formula_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="literal_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint constraintName="fk_formula2literal"
+                                 baseTableName="formula_literal"
+                                 baseColumnNames="literal_id"
+                                 referencedTableName="literal"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"/>
+        <addForeignKeyConstraint constraintName="fk_literal2formula"
+                                 baseTableName="formula_literal"
+                                 baseColumnNames="formula_id"
+                                 referencedTableName="formula"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"/>
+    </changeSet>
+</databaseChangeLog>
