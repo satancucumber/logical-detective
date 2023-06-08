@@ -51,11 +51,12 @@ public class ResMethod {
     }
 
     public void makeRes(int k) {
-        this.condition = new ArrayList<>();
-        this.solution = new ArrayList<>();
         List<List<Literal>> resNew = new ArrayList<>(new ArrayList<>());
         List<Literal> begin_literal1 = new ArrayList<>();
         List<Literal> begin_literal2 = new ArrayList<>();
+        this.solution = new ArrayList<>();
+        this.condition = new ArrayList<>();
+        List<Literal> begin_literal3 = new ArrayList<>();
         if (k == 0) {
             for (List<Literal> i : this.res) {
                 for (Literal j : i) {
@@ -66,14 +67,14 @@ public class ResMethod {
                 }
             }
             this.moving = new HashMap<>();
-            Literal literal = new Literal();
-            literal.setNegative(true);
-            literal.setSuspect(true);
-            literal.setName(this.suspect.getName());
-            literal.setDescription(this.suspect.getDescription());
-            literal.setId(this.suspect.getId());
-            literal.setFormulas(this.suspect.getFormulas());
-            this.res.add(List.of(literal));
+//            Literal literal = new Literal();
+//            literal.setNegative(true);
+//            literal.setSuspect(true);
+//            literal.setName(this.suspect.getName());
+//            literal.setDescription(this.suspect.getDescription());
+//            literal.setId(this.suspect.getId());
+//            literal.setFormulas(this.suspect.getFormulas());
+//            this.res.add(List.of(literal));
             this.path = new HashMap<>();
             for (List<Literal> w: this.getRes()) {
                 this.path.put(w, null);
@@ -171,9 +172,12 @@ public class ResMethod {
                     if (!valRepeatRes(resNew, c)) {
                         this.path.put(c, Arrays.asList(a, b));
                         resNew.add(c);
-                        if (c.size() == 0) {
-                            begin_literal1.addAll(a);
-                            begin_literal2.addAll(b);
+                        if (c.size() == 1) {
+                            if ((c.get(0).getName().equals(this.suspect.getName())) & (!c.get(0).getNegative())) {
+                                begin_literal1.addAll(a);
+                                begin_literal2.addAll(b);
+                                begin_literal3.addAll(c);
+                            }
                         }
                     }
                 }
@@ -189,8 +193,8 @@ public class ResMethod {
                 makeRes(k);
             } else {
                 this.res.clear();
-                this.solution.clear();
                 this.condition.clear();
+                this.solution.clear();
             }
         } else {
             List<List<List<Literal>>> result = new ArrayList<>();
@@ -198,7 +202,7 @@ public class ResMethod {
             Stack<List<Literal>> s = new Stack<>();
             s.push(begin_literal1);
             s.push(begin_literal2);
-            result.add(Arrays.asList(begin_literal1, begin_literal2));
+            result.add(Arrays.asList(begin_literal1, begin_literal2, begin_literal3));
             while (s.size() != 0) {
                 if (!Objects.equals(this.path.get(s.peek()), null)) {
                     List<Literal> a = s.pop();
@@ -245,7 +249,9 @@ public class ResMethod {
 
     private boolean valMakeRes() {
         for (List<Literal> i: this.res) {
-            if (i.size() == 0) return true;
+            if (i.size() == 1) {
+                if ((i.get(0).getName().equals(this.suspect.getName())) & (!i.get(0).getNegative())) return true;
+            }
         }
         return false;
     }

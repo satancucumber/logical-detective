@@ -6,6 +6,46 @@
     <changeSet logicalFilePath="2023-06-03-7-insert-table-literal"
                id="2023-06-03-7-insert-table-literal" author="satancucumber">
         <insert tableName="literal">
+            <column name="name" value="MA"/>
+            <column name="description" value="Алекс пришёл на работу утром"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="MC"/>
+            <column name="description" value="Карл пришёл на работу утром"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="MD"/>
+            <column name="description" value="Дилан пришёл на работу утром"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="LB"/>
+            <column name="description" value="Брюс ушёл из офиса последним"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="LC"/>
+            <column name="description" value="Карл ушёл из офиса последним"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="LD"/>
+            <column name="description" value="Дилан ушёл из офиса последним"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="S"/>
+            <column name="description" value="Сигнализация работала"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="N"/>
+            <column name="description" value="Преступление произошло ночью"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
             <column name="name" value="A"/>
             <column name="description" value="Алекс - преступник"/>
             <column name="suspect" value="true"/>
@@ -24,46 +64,6 @@
             <column name="name" value="D"/>
             <column name="description" value="Дилан - преступник"/>
             <column name="suspect" value="true"/>
-        </insert>
-        <insert tableName="literal">
-            <column name="name" value="LB"/>
-            <column name="description" value="Брюс ушёл из офиса последним"/>
-            <column name="suspect" value="false"/>
-        </insert>
-        <insert tableName="literal">
-            <column name="name" value="LC"/>
-            <column name="description" value="Карл ушёл из офиса последним"/>
-            <column name="suspect" value="false"/>
-        </insert>
-        <insert tableName="literal">
-            <column name="name" value="LD"/>
-            <column name="description" value="Дилан ушёл из офиса последним"/>
-            <column name="suspect" value="false"/>
-        </insert>
-        <insert tableName="literal">
-            <column name="name" value="N"/>
-            <column name="description" value="Преступление произошло ночью"/>
-            <column name="suspect" value="false"/>
-        </insert>
-        <insert tableName="literal">
-            <column name="name" value="MA"/>
-            <column name="description" value="Алекс пришёл на работу утром"/>
-            <column name="suspect" value="false"/>
-        </insert>
-        <insert tableName="literal">
-            <column name="name" value="MC"/>
-            <column name="description" value="Карл пришёл на работу утром"/>
-            <column name="suspect" value="false"/>
-        </insert>
-        <insert tableName="literal">
-            <column name="name" value="MD"/>
-            <column name="description" value="Дилан пришёл на работу утром"/>
-            <column name="suspect" value="false"/>
-        </insert>
-        <insert tableName="literal">
-            <column name="name" value="S"/>
-            <column name="description" value="Сигнализация работала"/>
-            <column name="suspect" value="false"/>
         </insert>
     </changeSet>
 </databaseChangeLog>

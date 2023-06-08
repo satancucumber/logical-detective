@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.SortNatural;
 
 import java.util.*;
 
@@ -33,6 +34,7 @@ public class Formula {
     @JoinTable (name="formula_literal",
             joinColumns=@JoinColumn (name="formula_id"),
             inverseJoinColumns=@JoinColumn(name="literal_id"))
+    @SortNatural
     private List<Literal> literals;
     @Column(name = "operators")
     private List<String> operators;

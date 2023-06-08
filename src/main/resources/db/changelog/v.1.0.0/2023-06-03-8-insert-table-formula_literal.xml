@@ -7,7 +7,7 @@
                id="2023-06-03-8-insert-table-formula_literal" author="satancucumber">
         <insert tableName="formula_literal">
             <column name="formula_id" value="1"/>
-            <column name="literal_id" value="12"/>
+            <column name="literal_id" value="7"/>
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="1"/>
@@ -15,59 +15,59 @@
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="1"/>
-            <column name="literal_id" value="1"/>
-        </insert>
-        <insert tableName="formula_literal">
-            <column name="formula_id" value="2"/>
-            <column name="literal_id" value="5"/>
-        </insert>
-        <insert tableName="formula_literal">
-            <column name="formula_id" value="2"/>
-            <column name="literal_id" value="12"/>
-        </insert>
-        <insert tableName="formula_literal">
-            <column name="formula_id" value="3"/>
-            <column name="literal_id" value="5"/>
-        </insert>
-        <insert tableName="formula_literal">
-            <column name="formula_id" value="3"/>
-            <column name="literal_id" value="12"/>
-        </insert>
-        <insert tableName="formula_literal">
-            <column name="formula_id" value="4"/>
-            <column name="literal_id" value="5"/>
-        </insert>
-        <insert tableName="formula_literal">
-            <column name="formula_id" value="4"/>
-            <column name="literal_id" value="6"/>
-        </insert>
-        <insert tableName="formula_literal">
-            <column name="formula_id" value="4"/>
-            <column name="literal_id" value="7"/>
-        </insert>
-        <insert tableName="formula_literal">
-            <column name="formula_id" value="5"/>
-            <column name="literal_id" value="10"/>
-        </insert>
-        <insert tableName="formula_literal">
-            <column name="formula_id" value="5"/>
-            <column name="literal_id" value="11"/>
-        </insert>
-        <insert tableName="formula_literal">
-            <column name="formula_id" value="5"/>
             <column name="literal_id" value="9"/>
         </insert>
         <insert tableName="formula_literal">
+            <column name="formula_id" value="2"/>
+            <column name="literal_id" value="4"/>
+        </insert>
+        <insert tableName="formula_literal">
+            <column name="formula_id" value="2"/>
+            <column name="literal_id" value="7"/>
+        </insert>
+        <insert tableName="formula_literal">
+            <column name="formula_id" value="3"/>
+            <column name="literal_id" value="4"/>
+        </insert>
+        <insert tableName="formula_literal">
+            <column name="formula_id" value="3"/>
+            <column name="literal_id" value="7"/>
+        </insert>
+        <insert tableName="formula_literal">
+            <column name="formula_id" value="4"/>
+            <column name="literal_id" value="4"/>
+        </insert>
+        <insert tableName="formula_literal">
+            <column name="formula_id" value="4"/>
+            <column name="literal_id" value="5"/>
+        </insert>
+        <insert tableName="formula_literal">
+            <column name="formula_id" value="4"/>
+            <column name="literal_id" value="6"/>
+        </insert>
+        <insert tableName="formula_literal">
+            <column name="formula_id" value="5"/>
+            <column name="literal_id" value="2"/>
+        </insert>
+        <insert tableName="formula_literal">
+            <column name="formula_id" value="5"/>
+            <column name="literal_id" value="3"/>
+        </insert>
+        <insert tableName="formula_literal">
+            <column name="formula_id" value="5"/>
+            <column name="literal_id" value="1"/>
+        </insert>
+        <insert tableName="formula_literal">
+            <column name="formula_id" value="6"/>
+            <column name="literal_id" value="4"/>
+        </insert>
+        <insert tableName="formula_literal">
             <column name="formula_id" value="6"/>
             <column name="literal_id" value="5"/>
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="6"/>
             <column name="literal_id" value="6"/>
-        </insert>
-        <insert tableName="formula_literal">
-            <column name="formula_id" value="6"/>
-            <column name="literal_id" value="7"/>
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="7"/>
@@ -75,19 +75,19 @@
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="8"/>
-            <column name="literal_id" value="6"/>
+            <column name="literal_id" value="5"/>
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="8"/>
-            <column name="literal_id" value="10"/>
+            <column name="literal_id" value="2"/>
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="8"/>
-            <column name="literal_id" value="3"/>
+            <column name="literal_id" value="11"/>
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="9"/>
-            <column name="literal_id" value="5"/>
+            <column name="literal_id" value="4"/>
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="9"/>
@@ -95,19 +95,19 @@
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="9"/>
-            <column name="literal_id" value="2"/>
+            <column name="literal_id" value="10"/>
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="10"/>
-            <column name="literal_id" value="7"/>
+            <column name="literal_id" value="6"/>
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="10"/>
-            <column name="literal_id" value="11"/>
+            <column name="literal_id" value="3"/>
         </insert>
         <insert tableName="formula_literal">
             <column name="formula_id" value="10"/>
-            <column name="literal_id" value="4"/>
+            <column name="literal_id" value="12"/>
         </insert>
     </changeSet>
 </databaseChangeLog>

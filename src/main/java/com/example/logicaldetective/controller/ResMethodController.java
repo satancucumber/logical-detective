@@ -100,34 +100,32 @@ public class ResMethodController {
     public List<String> selectedToText(List<List<Literal>> selected) {
         List<String> text = new ArrayList<String>();
         for (List<Literal> literals : selected) {
-            String str = "";
-            for (Literal literal : literals) {
-                String des = Character.toLowerCase(literal.getDescription().charAt(0)) + literal.getDescription().substring(1);
-                if (literals.indexOf(literal) == 0) {
-                    if (literal.getNegative()) {
-                        str += "Если " + des + ", то";
+            String des = "";
+                if (literals.size() == 1) {
+                    if (literals.get(0).getNegative()) {
+                        des += "Не " + Character.toLowerCase(literals.get(0).getDescription().charAt(0)) + literals.get(0).getDescription().substring(1) + ".";
                     }
                     else {
-                        str += "Если не " + des + ", то";
+                        des += literals.get(0).getDescription() + ".";
                     }
                 }
                 else {
-                    if (literal.getNegative()) {
-                        str += " не " + des;
-                    }
-                    else {
-                        str += " " + des;
-                    }
-                    if (literals.indexOf(literal) != literals.size() - 1) {
-                        str += " или";
-                    }
-                    else {
-                        str += ".";
-                    }
+                    for (Literal lit : literals) {
+                        String str = Character.toLowerCase(lit.getDescription().charAt(0)) + lit.getDescription().substring(1);
+                        if (literals.indexOf(lit) == 0) {
+                            if (lit.getNegative()) des += "Если " + str + ", то";
+                            else des += "Если не " + str + ", то";
+                        }
+                        else {
+                            if (lit.getNegative()) des += (" не " + str);
+                            else des += (" " + str);
 
+                            if (literals.indexOf(lit) != literals.size()-1) des += " или";
+                            else des += ".";
+                        }
+                    }
                 }
-            }
-            text.add(str);
+            text.add(des);
         }
         return text;
     }

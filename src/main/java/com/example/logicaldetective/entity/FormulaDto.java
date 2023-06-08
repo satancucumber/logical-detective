@@ -8,6 +8,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.SortNatural;
 
 import java.util.Arrays;
 import java.util.List;
@@ -27,6 +28,7 @@ public class FormulaDto {
     private Long id;
     private String description;
     @JsonManagedReference
+    @SortNatural
     private List<LiteralDto> literals;
     private List<String> operators;
     @JsonIgnore

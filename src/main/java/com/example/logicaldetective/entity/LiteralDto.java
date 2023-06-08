@@ -14,9 +14,18 @@ public class LiteralDto {
     private Long id;
     private String name;
     private String description;
+    private Boolean suspect;
     @JsonIgnore
     @JsonBackReference
     private List<FormulaDto> formulas;
+
+    public Boolean getSuspect() {
+        return suspect;
+    }
+
+    public void setSuspect(Boolean suspect) {
+        this.suspect = suspect;
+    }
 
     public Long getId() {
         return id;

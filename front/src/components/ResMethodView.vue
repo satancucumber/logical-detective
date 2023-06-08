@@ -91,6 +91,7 @@
         <p>
           Не удалось найти преступника за разумное время.
         </p>
+
       </div>
     <p></p>
   </div>
@@ -103,7 +104,7 @@
     name: "ResMethodView",
     data() {
       return {
-        alert: '',
+        alertText: '',
         select: [],
         result: [],
         isResult: false,
@@ -136,7 +137,7 @@
           stringlist.forEach(f => {
             this.result.push(f)
           })
-        })
+        }).then(this.resMethod)
       },
       getData() {
         this.$http.get(url + "/resmethod/transform").then(response => {
@@ -153,7 +154,7 @@
               }
             }))
           })
-        })
+        }).then(this.getDataString())
       },
       getDataString() {
         this.$http.get(url + "/resmethod/str").then(response => {
@@ -161,13 +162,15 @@
           stringlist.forEach(f => {
             this.resString.push(f)
           })
-        })
+        }).then(this.getSteps)
       },
       createData() {
 
-        this.$http.post(url + "/resmethod", this.formulas).then(
+        this.$http.post(url + "/resmethod", this.formulas).catch(() => {
+          this.alertText = "Ошибка!"
+        }).then(
             this.getData
-        ).then(this.getDataString).then(this.getSteps).then(this.resMethod)
+        )
       },
       resMethod() {
         if (this.result.length != 0) {
