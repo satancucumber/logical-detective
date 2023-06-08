@@ -51,7 +51,7 @@ export default {
     return{
       plotKey: 0,
       isPlot: false,
-      plot: { type: Object, default: () => ({}) },
+      plot: null,
       id: null,
       plots: []
     }

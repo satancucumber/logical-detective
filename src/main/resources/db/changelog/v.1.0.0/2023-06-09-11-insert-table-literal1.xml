@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet logicalFilePath="2023-06-09-11-insert-table-literal1"
+               id="2023-06-09-11-insert-table-literal1" author="satancucumber">
+
+        <insert tableName="literal">
+            <column name="name" value="CD"/>
+            <column name="description" value="Был четный день месяца"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="LG"/>
+            <column name="description" value="Глеб ушел позже всех"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="PG"/>
+            <column name="description" value="У Глеба было место, где спрятать украденное"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="LM"/>
+            <column name="description" value="Максим ушел позже всех"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="PM"/>
+            <column name="description" value="У Максима было место, где спрятать украденное"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="PL"/>
+            <column name="description" value="У тёти Люды было место, где спрятать украденное"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="W"/>
+            <column name="description" value="Преступление произошло в среду"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="PN"/>
+            <column name="description" value="У Натальи Ивановны было место, где спрятать украденное"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="F"/>
+            <column name="description" value="Преступление произошло в пятницу"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="CW"/>
+            <column name="description" value="Была четная неделя"/>
+            <column name="suspect" value="false"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="M"/>
+            <column name="description" value="Максим преступник"/>
+            <column name="suspect" value="true"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="G"/>
+            <column name="description" value="Глеб преступник"/>
+            <column name="suspect" value="true"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="L"/>
+            <column name="description" value="Тётя Люда преступница"/>
+            <column name="suspect" value="true"/>
+        </insert>
+        <insert tableName="literal">
+            <column name="name" value="N"/>
+            <column name="description" value="Наталья Ивановна преступница"/>
+            <column name="suspect" value="true"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

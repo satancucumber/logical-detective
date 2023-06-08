@@ -12,5 +12,8 @@
     <include file="2023-06-03-6-insert-table-formula.xml" relativeToChangelogFile="true" />
     <include file="2023-06-03-7-insert-table-literal.xml" relativeToChangelogFile="true" />
     <include file="2023-06-03-8-insert-table-formula_literal.xml" relativeToChangelogFile="true" />
-
+    <include file="2023-06-09-9-insert-table-plot1.xml" relativeToChangelogFile="true" />
+    <include file="2023-06-09-10-insert-table-formula1.xml" relativeToChangelogFile="true" />
+    <include file="2023-06-09-11-insert-table-literal1.xml" relativeToChangelogFile="true" />
+    <include file="2023-06-09-12-insert-table-formula_literal1.xml" relativeToChangelogFile="true" />
 </databaseChangeLog>

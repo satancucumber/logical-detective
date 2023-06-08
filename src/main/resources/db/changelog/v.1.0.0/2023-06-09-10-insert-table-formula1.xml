@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet logicalFilePath="2023-06-09-10-insert-table-formula1"
+               id="2023-06-09-10-insert-table-formula1" author="satancucumber">
+
+        <insert tableName="formula">
+            <column  name="description"  value="Если была среда и у тети Люды есть место куда прятать украденное то тетя Люда - преступница"/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{=>,&amp;,*,*,*}"/>
+        </insert>
+        <insert tableName="formula">
+            <column  name="description"  value="Если преступление произошло в пятницу и у Натальи Ивановны есть куда спрятать украденное и при этом была четная неделя то Наталья Ивановна - преступница"/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{=>,&amp;,*,&amp;,*,*,*}"/>
+        </insert>
+        <insert tableName="formula">
+            <column  name="description"  value="Если Глеб ушел позже всех и у него есть куда прятать краденное то Глеб - преступник"/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{=>,&amp;,*,*,*}"/>
+        </insert>
+        <insert tableName="formula">
+            <column  name="description"  value="Если Максим ушел позже всех и у него есть куда прятать краденное то Максим - преступник"/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{=>,&amp;,*,*,*}"/>
+        </insert>
+        <insert tableName="formula">
+            <column  name="description"  value="Максим по четным дням уходит позже всех"/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{=>,*,*}"/>
+        </insert>
+        <insert tableName="formula">
+            <column  name="description"  value="Глеб по нечетным дня уходит позже всех"/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{=>,!,*,*}"/>
+        </insert>
+        <insert tableName="formula">
+            <column  name="description"  value="У заведующей есть своя квартира"/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{*}"/>
+        </insert>
+        <insert tableName="formula">
+            <column  name="description"  value="У уборщицы есть комната в коммуналке"/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{*}"/>
+        </insert>
+        <insert tableName="formula">
+            <column  name="description"  value="У Максима есть родственник в городе"/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{*}"/>
+        </insert>
+        <insert tableName="formula">
+            <column  name="description"  value="У Глеба нет мест куда можно было бы спрятать украденное"/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{!,*}"/>
+        </insert>
+        <insert tableName="formula">
+            <column  name="description"  value="четного числа"/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{*}"/>
+        </insert>
+        <insert tableName="formula">
+            <column  name="description"  value="нечетной неделе"/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{!,*}"/>
+        </insert>
+        <insert tableName="formula">
+            <column  name="description"  value="Преступление было совершено в пятницу "/>
+            <column  name="plot_id"  value="2"/>
+            <column  name="operators"  value="{*}"/>
+        </insert>
+
+
+    </changeSet>
+</databaseChangeLog>
