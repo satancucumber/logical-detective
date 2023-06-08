@@ -13,7 +13,7 @@
             <column name="name" type="varchar(256)">
                 <constraints nullable="false"/>
             </column>
-            <column name="text" type="varchar(256) []">
+            <column name="text" type="varchar(4048) []">
                 <constraints nullable="false"/>
             </column>
         </createTable>
