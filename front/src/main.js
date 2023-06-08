@@ -17,9 +17,9 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 Vue.use(http, {
-  baseUrl: "http://localhost:8181/api/v1"
+  baseUrl: "http://host.docker.internal:8181/api/v1"
 })
-Vue.prototype.$baseUrl = "http://localhost:8181/api/v1"
+Vue.prototype.$baseUrl = "http://host.docker.internal:8181/api/v1"
 export const url = Vue.prototype.$baseUrl
 
 new Vue({
