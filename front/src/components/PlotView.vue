@@ -41,7 +41,7 @@
           <b-col style="border: solid dimgrey; padding: 10px 80px">
             <b-icon icon="display"></b-icon>
             Окно доказательств
-            <b-button @click="showRes" > Разгадать </b-button>
+            <b-button @click="showRes" > Расследовать </b-button>
           </b-col>
         </b-row>
         <b-row>
